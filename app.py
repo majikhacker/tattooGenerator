@@ -10,15 +10,11 @@ title_text = "Tattoo? Yes Please!"
 st.markdown(f"<h1 style='text-align: center;'>{title_text}</h1>", unsafe_allow_html=True)
 
 # Business name and information
-st.write("Tattoo? Yes, Please! Because when someone asks if you want a tattoo, it's more than a simple yes or no. Imagine"\
-"this, someone asks you if you want a tattoo, and your immediate response is 'Yes, Please!' We take the complications out of"\
-"the equation and create something you can take in and get tattooed. Have you ever wanted a tattoo, but struggled to"\
-"articulate what you want? Crafting your dream design is an art in itself, whether it's the intricate lines of a Japanese"\
-"masterpiece, the primal energy of tribal art or the timeless charm of traditional/old school designs - we're here to listen"\
-"to understand, and to translate. The more detail, the better. We'll conjure a sketch that's as unique as your fingerprint,"\
-"as personal as your story. So, when we ask you, 'Tattoo? Yes, Please!' is going to be your answer. Let's make your tattoo"\
-"dreams a reality. Let's create something that's not just ink on skin but a piece of your soul etched in time. Manifest your"\
-"ideas into reality with Tattoo Yes Please.")
+st.write("Tattoo? Yes, Please! Because when someone asks if you want a tattoo, it's more than a simple yes or no. We take"\
+"the complications out of the equation and create something you can take in and get tattooed. Have you ever wanted a tattoo,"\
+"but struggled to articulate what you want? We'll conjure a sketch that's as unique as your fingerprint as personal as your"\
+"story. Let's make your tattoo dreams a reality. Let's create something that's not just ink on skin but a piece of your soul"\
+"etched in time. Manifest your ideas into reality with Tattoo Yes Please.")
 
 
 
