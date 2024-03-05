@@ -81,6 +81,7 @@ def generate_and_append_image(user_text):
     prompt=user_text + tattoo_prompt,
     size="1024x1024",
     quality="standard",
+    style="natural",
     n=1)
 
     # Assuming the response structure has the image URL at response['data'][0]['url']
