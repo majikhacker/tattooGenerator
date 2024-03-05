@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI, ApiError
 
 # Initialize the OpenAI client with your API key
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client = OpenAI.api_key=st.secrets["OPENAI_API_KEY"]
 
 # Define your title text
 title_text = "T.Y.P."
@@ -11,7 +11,7 @@ title_text = "T.Y.P."
 st.markdown(f"<h1 style='text-align: center;'>{title_text}</h1>", unsafe_allow_html=True)
 
 # Display business name in small text on the sidebar
-st.sidebar.write("created by MajikB AI")
+st.write("created by MajikB AI")
 
 # Define the options for the user to select
 color_options = ["B/W", "Color"]
