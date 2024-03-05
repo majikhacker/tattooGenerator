@@ -57,11 +57,10 @@
     
 # image_url = response.data[0].url
 # print(f'Tattoo Generator: {image_url}')
-
-from openai import OpenAI
+import openai
 import streamlit as st
 
-client = OpenAI.api_key=st.secrets["OPENAI_API_KEY"]
+client = openai.api_key=st.secrets["OPENAI_API_KEY"]
 
 
 # Assuming your OpenAI API key is stored in Streamlit's secrets or an environment variable
