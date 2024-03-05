@@ -4,9 +4,24 @@ import streamlit as st
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 
-# Assuming your OpenAI API key is stored in Streamlit's secrets or an environment variable
+# Define your title text
+title_text = "T.Y.P."
 
+
+# Use st.markdown() to apply CSS for centering
+st.markdown(f"<h1 style='text-align: center;'>{title_text}</h1>", unsafe_allow_html=True)
+
+# Display business name in small text on the sidebar
+st.sidebar.write(f"<p style='font-size: small;'>{created by MajikB AI}</p>", unsafe_allow_html=True)
+
+# Display "Created by" in small text at the bottom of the sidebar
+st.sidebar.write(f"<p style='font-size: small; position: fixed; bottom: 0;'>{created_by}</p>", unsafe_allow_html=True)
+
+# Your main content here
+
+# Assuming your OpenAI API key is stored in Streamlit's secrets or an environment variable
 # Initialize messages if not already in the session state
+st.text("So what should i sketch out for you?")
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "system", "content": "tattoo_prompt"},
