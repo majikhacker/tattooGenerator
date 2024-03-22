@@ -4,44 +4,108 @@ import streamlit as st
 # Initialize the OpenAI client with API key
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-# Title Text
 title_text = "Tattoo? Yes Please!"
 
 # Apply HTML/CSS attributes
 st.markdown(f"<h1 style='text-align: center;'>{title_text}</h1>", unsafe_allow_html=True)
 
+# Business name and information
+st.write("'Tattoo? Yes Please!', is created and maintained by 'NovusOrbisTechnology,LLC'. We're here to help bring your tattoo ideas into a 'sketch' that you can then take to a tattoo artist that can then perfect it and bring it to life getting it tattooed on to your skin, taking your unique idea and turning it into something you will have for a lifetime!")
+
 # Define options for user to select
-color_options = ["B/W", "Color"]
-style_options = ["Japanese", "Tribal", "Traditional/Old School", "Realistic", "Basic"]
-technique_options = ["Blackwork(No hard lines)", "Outlined"]
+color_options = ["b/w", "color"]
+technique_options = ["basic", "traditional/old-school", "tribal", "japanese"]
 
-# Collect user input for the tattoo options
-selected_color = st.selectbox("Would you like your tattoo in black and white or in color?", color_options)
-selected_style = st.selectbox("Choose the style for your tattoo:", style_options)
-selected_technique = st.selectbox("Choose the technique for your tattoo:", technique_options)
 
-user_message = st.text_input("Describe the idea you have for your tattoo:")
+    # Collect user input for the tattoo options
+with st.form(key="user_input_form"):
+    selected_color = st.selectbox("Would you like your tattoo in black and white or in color?", color_options)
+    selected_technique = st.selectbox("Choose the technique for your tattoo:", technique_options)
+    user_message = st.text_input("Describe the idea you have for your tattoo:")
+    submitted = st.form_submit_button(label="Generate")
 
-# Description that will be added to user input to ensure the image looks like a tattoo sketch
+    # Custom prompt that will be added with 'user prompt' to get desired 'tattoo sketch effect'
+   
 tattoo_prompt = (
-    f"Can you create an image on a blank white canvas that looks like a tattoo sketch of user_message with no backround that has {selected_style} style, with {selected_technique} technique and in {selected_color}"
+    
+    f"Generate a sketched image that should depict {user_message} using the {selected_technique} technique and in {selected_color}." 
+    f"Ensure the image is complete, on a white canvas with a blank background." 
+    f"The image should accurately reflect the user's selections without adding unexpected elements or colors." 
+    f"Avoid including tattoos on any objects in the image."
+
 )
 
-
-
-if user_message and st.button("Generate"):
+        # Generate the image
+if submitted and user_message:
     client = openai.OpenAI()  # Create an instance of the OpenAI client
     response = client.images.generate(
         model="dall-e-3",
-        prompt=tattoo_prompt + user_message,  # Use user's message as prompt
+        prompt=tattoo_prompt + user_message, 
+        quality="hd",
+        style="vivid",
         n=1,
         size="1024x1024"
     )
+
+        # Get the image URL
     image_url = response.data[0].url
 
-    st.image(image_url, caption="Generated Image")
+        # Display generated image
+    st.markdown(f"[Send me this image!](https://your-email-form-page.com)")
+    st.image(image_url, caption="Click the link above to receive this image via email.")
 
-st.write("Tattoo Yes Please is Created and Owned by NovusOrbisTechnology, LLC")
+
+
+
+# *****___________*******________________*********___________________***********______________________*********____________
+
+# import openai
+# import streamlit as st
+
+# # Initialize the OpenAI client with API key
+# openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+# # Title Text
+# title_text = "Tattoo? Yes Please!"
+
+# # Apply HTML/CSS attributes
+# st.markdown(f"<h1 style='text-align: center;'>{title_text}</h1>", unsafe_allow_html=True)
+
+
+# # Define options for user to select
+# color_options = ["B/W", "Color"]
+# technique_options = ["Basic", "Tribal", "Traditional/Old School", "Japanese"]
+
+# # Collect user input for the tattoo options
+# with st.form(key="user_input_form"):
+#     selected_color = st.selectbox("Would you like your tattoo in black and white or in color?", color_options)
+#     selected_technique = st.selectbox("Choose the technique for your tattoo:", technique_options)
+#     user_message = st.text_input("Describe the idea you have for your tattoo:")
+#     submitted = st.form_submit_button(label="Generate")
+
+# # Description that will be added to user input to ensure the image looks like a tattoo sketch
+# tattoo_prompt = (
+#     f"Can you create an image of (user_message) with {selected_technique} technique and in {selected_color}"
+#     # f"It must only include the user_message with a {selected_technique} technique, in {selected_color}"
+#     f"The image must fill up the entire page and be complete with a blank white background."
+#     # f"Do not include anything in the image that is not in this prompt."
+# )
+
+# if submitted and user_message:
+#     client = openai.OpenAI()  # Create an instance of the OpenAI client
+#     response = client.images.generate(
+#         model="dall-e-3",
+#         prompt=tattoo_prompt + user_message, 
+#         quality="hd",
+#         # style=selected_style,# Use user's message as prompt
+#         n=1,
+#         size="1024x1024"
+#     )
+#     image_url = response.data[0].url
+
+#     st.image(image_url, caption="Generated Image")
+
+# st.write("Tattoo Yes Please is Created and Owned by NovusOrbisTechnology, LLC")
 
 
 
