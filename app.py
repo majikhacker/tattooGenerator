@@ -10,7 +10,18 @@ title_text = "Tattoo? Yes Please!"
 st.markdown(f"<h1 style='text-align: center;'>{title_text}</h1>", unsafe_allow_html=True)
 
 # Business name and information
-st.write("'Tattoo? Yes Please!', is created and maintained by 'NovusOrbisTechnology,LLC'. We're here to help bring your tattoo ideas into a 'sketch' that you can then take to a tattoo artist that can then perfect it and bring it to life getting it tattooed on to your skin, taking your unique idea and turning it into something you will have for a lifetime!")
+st.write("Tattoo? Yes, Please! Because when someone asks if you want a tattoo, it's more than a simple yes or no. Imagine"\
+"this, someone asks you if you want a tattoo, and your immediate response is 'Yes, Please!' We take the complications out of"\
+"the equation and create something you can take in and get tattooed. Have you ever wanted a tattoo, but struggled to"\
+"articulate what you want? Crafting your dream design is an art in itself, whether it's the intricate lines of a Japanese"\
+"masterpiece, the primal energy of tribal art or the timeless charm of traditional/old school designs - we're here to listen"\
+"to understand, and to translate. The more detail, the better. We'll conjure a sketch that's as unique as your fingerprint,"\
+"as personal as your story. So, when we ask you, 'Tattoo? Yes, Please!' is going to be your answer. Let's make your tattoo"\
+"dreams a reality. Let's create something that's not just ink on skin but a piece of your soul etched in time. Manifest your"\
+"ideas into reality with Tattoo Yes Please.")
+
+
+
 
 # Define options for user to select
 color_options = ["b/w", "color"]
@@ -53,6 +64,64 @@ if submitted and user_message:
         # Display generated image
     st.markdown(f"[Send me this image!](https://your-email-form-page.com)")
     st.image(image_url, caption="Click the link above to receive this image via email.")
+
+
+# import openai
+# import streamlit as st
+
+# # Initialize the OpenAI client with API key
+# openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+# # Apply HTML/CSS attributes for the title
+# title_text = "Tattoo? Yes Please!"
+# st.markdown(f"<h1 style='text-align: center;'>{title_text}</h1>", unsafe_allow_html=True)
+
+# # Introduction and description
+# st.write("""
+#     Welcome to Tattoo Yes Please! Imagine someone asks you if you want a tattoo, and your immediate response is 'Yes, Please!' 
+#     We take the complications out of the equation and create something you can take in and get tattooed. Have you ever 
+#     wanted a tattoo, but struggled to articulate what you want? Crafting your dream design is an art in itself, whether 
+#     it's the intricate lines of a Japanese masterpiece, the primal energy of tribal art or the timeless charm of 
+#     traditional/old school designs - we're here to listen to understand, and to translate. The more detail, the better. 
+#     We'll conjure a sketch that's as unique as your fingerprint, as personal as your story. So, when we ask you, 
+#     'Tattoo? Yes, Please!' is going to be your answer. Let's make your tattoo dreams a reality. Let's create something 
+#     that's not just ink on skin but a piece of your soul etched in time. Manifest your ideas into reality with Tattoo Yes Please.
+#     """)
+
+# # Define options for user to select
+# color_options = ["b/w", "color"]
+# technique_options = ["basic", "traditional/old-school", "tribal", "japanese"]
+
+# # Use sidebar for inputs
+# with st.sidebar:
+#     st.write("### Tattoo Design Preferences")
+#     with st.beta_columns(2):
+#         selected_color = st.selectbox("Color", color_options, key="color_select")
+#         selected_technique = st.selectbox("Technique", technique_options, key="technique_select")
+#         user_message = st.text_input("Describe your tattoo idea:", key="user_message")
+#         submitted = st.form_submit_button(label="Generate")
+
+# # Generate the image
+# if submitted and user_message:
+#     client = openai.OpenAI() # Create an instance of the OpenAI client
+#     response = client.images.generate(
+#         model="dall-e-3",
+#         prompt=tattoo_prompt + user_message, 
+#         quality="hd",
+#         style="vivid",
+#         n=1,
+#         size="1024x1024"
+#     )
+
+#     # Get the image URL
+#     image_url = response.data[0].url
+
+#     # Display generated image
+#     st.markdown(f"[Send me this image!](https://your-email-form-page.com)")
+#     st.image(image_url, caption="Click the link above to receive this image via email.")
+
+
+
 
 
 
