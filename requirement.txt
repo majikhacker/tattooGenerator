@@ -2,16 +2,19 @@ streamlit
 openai 1.2.0
 
 
-Tattoo? Yes, Please! Because when someone asks if you want a tattoo, it's more than a simple yes or no. Welcome to Tattoo Yes Please, where we simplify the process of getting inked.
-
-Imagine this: someone asks you if you want a tattoo, and your immediate response is "Yes, Please!" That's the magic of Tattoo Yes Please - we take the complications out of the equation and create something you can take in and get tattooed.
-
-Have you ever envisioned the perfect tattoo, but struggled to articulate it? Crafting your dream design is an art in itself. Imagine stepping into a tattoo studio armed not only with an idea but with a sketch that brings it to life. With us, you complete half of the design process. Take it to your favorite artist, and let them weave their mastery around it. Together, you'll refine, perfect, and elevate it into something truly extraordinary.
-
-Share your vision, your concept, your essence. Whether it's the intricate lines of a Japanese masterpiece, the primal energy of tribal art, or the timeless charm of traditional ink - we're here to listen, to understand, and to translate.
-
-The more detail, the better. Every nuance, every shade of meaning - we'll capture it all. Then, watch as our magic unfolds. We'll conjure a sketch that's as unique as your fingerprint, as personal as your story.
-
-So, when we ask you, "Tattoo? Yes, Please!" is going to be your answer. Let's make your tattoo dreams a reality. Let's create something that's not just ink on skin but a piece of your soul etched in time. Manifest your ideas into reality with Tattoo Yes Please.
+Tattoo? Yes, Please! Because when someone asks if you want a tattoo, it's more than a simple yes or no. Welcome\n
+to Tattoo Yes Please, where we simplify the process of getting inked.  Imagine this: someone asks you if you want\n
+a tattoo, and your immediate response is "Yes, Please!" That's the magic of Tattoo Yes Please - we take the\n
+complications out of the equation and create something you can take in and get tattooed. Have you ever envisioned\n
+the perfect tattoo, but struggled to articulate it? Crafting your dream design is an art in itself. Imagine\n
+stepping into a tattoo studio armed not only with an idea but with a sketch that brings it to life. With us, you\n
+complete half of the design process. Take it to your favorite artist, and let them weave their mastery around it.\n
+Together, you'll refine, perfect, and elevate it into something truly extraordinary. Share your vision, your\n
+concept, your essence. Whether it's the intricate lines of a Japanese masterpiece, the primal energy of tribal art\n
+or the timeless charm of traditional ink - we're here to listen, to understand, and to translate. The more detail,\n
+the better. Every nuance, every shade of meaning - we'll capture it all. Then, watch as our magic unfolds. We'll\n
+conjure a sketch that's as unique as your fingerprint, as personal as your story. So, when we ask you, "Tattoo?\n
+Yes, Please!" is going to be your answer. Let's make your tattoo dreams a reality. Let's create something that's\n
+not just ink on skin but a piece of your soul etched in time. Manifest your ideas into reality with Tattoo Yes Please.
 
 
