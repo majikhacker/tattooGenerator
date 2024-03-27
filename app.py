@@ -62,8 +62,8 @@ if submitted and user_message:
     image_url = response.data[0].url
 
         # Display generated image
+    st.image(image_url)    
     st.markdown(f"[Send me this image!](https://your-email-form-page.com)")
-    st.image(image_url, caption="Click the link above to receive this image via email.")
 
 
 # import openai
