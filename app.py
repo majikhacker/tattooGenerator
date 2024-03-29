@@ -48,7 +48,7 @@ tattoo_prompt = (
 
         # Generate the image
 if submitted and user_message:  
-        response = OpenAI.images.generate(
+    response = OpenAI.images.generate(
         model="dall-e-3",
         prompt=tattoo_prompt + user_message, 
         quality="hd",
@@ -58,10 +58,10 @@ if submitted and user_message:
     )
 
         # Get the image URL
-image_url = response.data[0].url
+    image_url = response.data[0].url
 
         # Display generated image
-st.image(image_url)    
-st.markdown(f"[Send me this image!](https://your-email-form-page.com)")
+    st.image(image_url)    
+    st.markdown(f"[Send me this image!](https://your-email-form-page.com)")
 
 
