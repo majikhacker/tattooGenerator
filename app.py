@@ -48,6 +48,7 @@ tattoo_prompt = (
 
         # Generate the image
 if submitted and user_message:  
+    client = OpenAI()
     response = OpenAI.images.generate(
         model="dall-e-3",
         prompt=tattoo_prompt + user_message, 
