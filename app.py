@@ -6,6 +6,27 @@ OpenAI.api_key = st.secrets["OPENAI_API_KEY"]
 
 title_text = "Tattoo? Yes Please!"
 
+import streamlit as st
+
+# Set the background image
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url('/images/tattooBckImg1.png') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Your Streamlit app code goes here
+
+
 # Apply HTML/CSS attributes
 st.markdown(f"<h1 style='text-align: center;'>{title_text}</h1>", unsafe_allow_html=True)
 
@@ -45,7 +66,7 @@ tattoo_prompt = (
         # Generate the image
 if submitted and user_message:  
     client = OpenAI()
-    response = OpenAI.images.generate(
+    response = client.images.generate(
         model="dall-e-3",
         prompt=tattoo_prompt + user_message, 
         quality="hd",
